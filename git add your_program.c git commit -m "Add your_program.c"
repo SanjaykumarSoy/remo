@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+   int n=1,m=10;
+   int evencount,oddcount,evensum=0,oddsum=0;
+   printf("odd number between m and n:");
+   for(int i=n;i<=m;i++){
+       if(i%2!=0){
+           printf(" %d, ",i);
+           oddcount++;
+           oddsum+=i;
+       }
+   } printf("\n");
+   printf("even number between m and n:");
+   for(int i=n;i<=m;i++){
+       if(i%2==0){
+           printf(" %d, ",i);
+           evencount++;
+           evensum+=i;
+       }
+   }
+   printf("\n no.of add number between %d and %d : %d",m,n,oddcount);
+   printf("\n no.of add number between %d and %d : %d",m,n,evencount);
+   printf("\n sum of odd number:%d",oddsum);
+   printf("\n sum of even number:%d ",evensum);
+    return 0;
+}
