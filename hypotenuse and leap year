@@ -3,7 +3,7 @@
 int main() {
     double a=5, b=2,c;
     c=sqrt(a*a+b*b);
-    printf("the lenth of hypotenuse is %.2lf\n",c);
+    printf("the length of hypotenuse is %.2lf\n",c);
    
     return 0;
 }
