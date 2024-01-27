@@ -29,5 +29,5 @@ void swap( int x, int y){
     temp=x;
     x=y;
     y=temp;
-  printf("inside the function\n a =%d\n b=%d\n",x);
+  printf("inside the function\n a =%d\n b=%d\n",x,y);
 }
