@@ -1,0 +1,14 @@
+#include <stdio.h>
+void square(int );
+int main() {
+    int num=5;
+    printf(" before calling function=%d\n",num);
+    square(num);
+    printf("after calling function=%d\n", num);
+    
+    return 0;
+}
+void square( int x){
+    x=x*x;
+  printf("inside the function =%d\n",x);
+}
