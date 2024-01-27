@@ -1,0 +1,30 @@
+#include <stdio.h>
+int x,n,i;
+int power(x,n){
+    int result=1;
+    for(i=0;i<n;i++){
+        result*=x;
+    }
+    return result;
+}
+int add(x,n){
+    return x+n;
+}
+int sub(x,n){
+    return x-n;
+}
+int mul(x,n){
+    return x*n;
+}
+int div(x,n){
+    return x/n;
+}
+int main(){
+    int x=10,n=2;
+    printf("power=%d",power(x,n));
+    printf("\nadd=%d", add(x,n));
+    printf("\nsub=%d", sub(x,n));
+    printf("\nmul=%d",mul(x,n));
+    printf("\ndiv=%d",div(x,n));
+    return 0;
+}
