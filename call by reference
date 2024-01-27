@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int a=100;
+    int b=200;
+    printf(" before swapping\n a=%d \n b=%d",a,b);
+    swap(&a,&b);
+    printf(" \nafter swapping\n a=%d \n b=%d",a,b);
+    return 0;
+}
+void swap( int *n ,int *y ){
+    int temp;
+    temp=*n;
+    *n=*y;
+    *y=temp;
+    return;
+}
