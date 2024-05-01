@@ -1,0 +1,35 @@
+// Function to implement chromatic coloring algorithm
+void chromaticColoring(int vertices, int adjacencyMatrix[][vertices], int colors[]) {
+    // Initialize an empty list of colors
+    int colorList[vertices];
+    memset(colorList, -1, sizeof(colorList)); // Initialize colors to -1 (unassigned)
+
+    // Sort vertices based on degree (number of adjacent vertices)
+    // Here, we assume the vertices are already sorted in descending order
+
+    // Iterate over each vertex
+    for (int vertex = 0; vertex < vertices; vertex++) {
+        // Initialize available colors for the current vertex
+        bool available[vertices];
+        memset(available, true, sizeof(available));
+
+        // Check colors assigned to adjacent vertices
+        for (int adjacentVertex = 0; adjacentVertex < vertices; adjacentVertex++) {
+            if (adjacencyMatrix[vertex][adjacentVertex] && colorList[adjacentVertex] != -1) {
+                available[colorList[adjacentVertex]] = false;
+            }
+        }
+
+        // Find the smallest available color
+        int availableColor;
+        for (availableColor = 0; availableColor < vertices; availableColor++) {
+            if (available[availableColor]) {
+                break;
+            }
+        }
+
+        // Assign the smallest available color to the vertex
+        colorList[vertex] = availableColor;
+        colors[vertex] = availableColor;
+    }
+}
